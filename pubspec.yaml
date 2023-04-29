@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.0-55.0.dev <4.0.0'
+  sdk: '>=2.19.6 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -57,6 +57,8 @@ flutter:
     - assets/images/fxemoji_hospital.png
     - assets/images/openmoji_female-doctor.png
     - assets/images/ic_baseline-calendar-month.png
+    - assets/images/doctor_profile.png
+    - assets/images/clinic.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

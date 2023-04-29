@@ -1,20 +1,18 @@
-// import 'package:app/widgets/utils.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:one/widgets/Clinic.dart';
 
-class Findadoctor extends StatefulWidget {
-  const Findadoctor({super.key});
-
-  // const Findadoctor(User? user, {super.key});
+class NearbyHealthFacilities extends StatefulWidget {
+  const NearbyHealthFacilities({super.key});
 
   @override
-  State<Findadoctor> createState() => FindadoctorState();
+  State<NearbyHealthFacilities> createState() => _NearbyHealthFacilitiesState();
 }
 
-class FindadoctorState extends State<Findadoctor> {
+class _NearbyHealthFacilitiesState extends State<NearbyHealthFacilities> {
   @override
   Widget build(BuildContext context) {
-    // Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -41,16 +39,34 @@ class FindadoctorState extends State<Findadoctor> {
                 ),
                 Column(
                   children: [
-                    Text("Find a doctor",
+                    Text("Nearby Health Facilities",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w400,
                             color: Colors.teal)),
                   ],
-                )
+                ),
+                Container(
+                  height: 40,
+                  margin: const EdgeInsets.only(top: 10, bottom: 10),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.all(10),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(3),
+                      ),
+                      hintText: "Search Nearby Doctors",
+                      suffixIcon: Icon(Icons.search, color: Colors.teal),
+                      hintStyle: TextStyle(fontSize: 15),
+                    ),
+                  ),
+                ),
+                Column(
+                  children: [Clinic(), Clinic(), Clinic()],
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

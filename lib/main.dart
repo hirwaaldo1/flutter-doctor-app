@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:one/Screens/EditProfile.dart';
 import 'package:one/Screens/Findadoctor.dart';
+import 'package:one/Screens/DoctorProfile.dart';
+import 'package:one/Screens/NearbyHealthFacilities.dart';
+import 'package:one/Screens/Profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: const Findadoctor(),
+      home: const EditProfile(),
       debugShowCheckedModeBanner: false,
     );
   }

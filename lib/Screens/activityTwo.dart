@@ -1,17 +1,18 @@
 // import 'package:app/widgets/utils.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:one/Screens/activity.dart';
 
-class ActivityOne extends StatefulWidget {
-  const ActivityOne({super.key});
+class ActivityTwo extends StatefulWidget {
+  const ActivityTwo({super.key});
 
-  // const ActivityOne(User? user, {super.key});
+  // const ActivityTwo(User? user, {super.key});
 
   @override
-  State<ActivityOne> createState() => ActivityOneState();
+  State<ActivityTwo> createState() => ActivityTwoState();
 }
 
-class ActivityOneState extends State<ActivityOne> {
+class ActivityTwoState extends State<ActivityTwo> {
   @override
   Widget build(BuildContext context) {
     // Size size = MediaQuery.of(context).size;
@@ -75,11 +76,10 @@ class ActivityOneState extends State<ActivityOne> {
                               style: ButtonStyle(
                                 backgroundColor:
                                     MaterialStateProperty.all<Color>(
-                                        Colors.white),
+                                        Colors.grey.shade600),
                               ),
                               child: Text('Pending',
-                                  style:
-                                      TextStyle(color: Colors.indigo.shade900)),
+                                  style: TextStyle(color: Colors.white)),
                               onPressed: () => null,
                             ),
                           ),
@@ -89,10 +89,11 @@ class ActivityOneState extends State<ActivityOne> {
                               style: ButtonStyle(
                                 backgroundColor:
                                     MaterialStateProperty.all<Color>(
-                                        Colors.grey.shade600),
+                                        Colors.white),
                               ),
                               child: Text('Confirmed',
-                                  style: TextStyle(color: Colors.white)),
+                                  style:
+                                      TextStyle(color: Colors.indigo.shade900)),
                               onPressed: () => null,
                             ),
                           ),
@@ -158,97 +159,5 @@ class ActivityOneState extends State<ActivityOne> {
         ],
       ),
     );
-  }
-}
-
-class DrCard extends StatelessWidget {
-  const DrCard({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.all(9),
-        decoration: BoxDecoration(
-          // hex color
-          color: Colors.teal.shade900,
-          borderRadius: BorderRadius.circular(4),
-        ),
-        child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-          SizedBox(
-            height: 154,
-            width: 117,
-            child: Column(children: [
-              Image.asset(
-                'assets/images/doctor1.png',
-                height: 100,
-              ),
-              SizedBox(height: 10),
-              Text("Dr. Ruth",
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                      letterSpacing: 0.23,
-                      fontSize: 18,
-                      color: Colors.grey.shade900,
-                      fontWeight: FontWeight.bold)),
-              Text("Pending",
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 0.16,
-                      color: Colors.white)),
-            ]),
-          ),
-          SizedBox(
-            width: 20,
-          ),
-          Expanded(
-            child: Padding(
-                padding: EdgeInsets.only(top: 5, right: 19, bottom: 9),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("Dr. Ruth",
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  letterSpacing: 0.23,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold)),
-                          Icon(Icons.delete, color: Colors.red, size: 20),
-                        ],
-                      ),
-                      Padding(
-                          padding: EdgeInsets.only(top: 7),
-                          child: Text("Gynocologist",
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 0.16))),
-                      Padding(
-                          padding: EdgeInsets.only(top: 9),
-                          child: Text("Remera, Kigali",
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(letterSpacing: 0.16))),
-                      Padding(
-                          padding: EdgeInsets.only(top: 9),
-                          child: Text("Horebu Clinic",
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  decoration: TextDecoration.underline,
-                                  letterSpacing: 0.16))),
-                    ])),
-          )
-        ]));
   }
 }

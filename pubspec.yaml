@@ -57,6 +57,7 @@ flutter:
     - assets/images/fxemoji_hospital.png
     - assets/images/openmoji_female-doctor.png
     - assets/images/ic_baseline-calendar-month.png
+    - assets/images/doctor1.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

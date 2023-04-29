@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:one/Screens/Findadoctor.dart';
+import 'package:one/Screens/activity.dart';
+import 'package:one/Screens/changePassword.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: const Findadoctor(),
+      home: const ChangePassword(),
       debugShowCheckedModeBanner: false,
     );
   }
